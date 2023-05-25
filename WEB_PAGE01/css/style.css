@@ -1,0 +1,130 @@
+/* html5와 충돌이 잘 안나는 css3 */
+/* 전체 색깔 변경 */
+
+/* 문자 인코딩 */
+@charset "UTF-8";
+/* 공백제거 */
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    /* 불릿(ㆍ) 없애기 */
+    list-style: none;
+}
+/* 밑줄 제거 */
+a{
+    text-decoration: none;
+}
+/* 테두리 */
+img{
+    border: 0;
+}
+/* 글꼴 수정 */
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* main_header */
+
+#main_header{
+    /* 가운데 정렬 및 높이 너비 지정 */
+    width: 960px;
+    /* overflow: hidden; */
+    height: 160px;
+    margin: 0 auto;
+    position: relative;
+}
+/* 자식 요소(>로 표현) */
+#main_header > #title {
+    /* 고정 */
+    position: absolute;
+    /* 좌표값 */
+    left: 20px;
+    top: 30px;
+    /* 제목 폰트 적용 */
+    font-family: 'Henny Penny', cursive;
+}
+
+
+/* main_gnb */
+
+#main_header > #main_gnb{
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+
+/* 메뉴를 왼쪽부터 정렬 */
+/* 자식의 후손을 부를땐 (>생략 가능) */
+#main_gnb > ul > li{
+    float: left;
+}
+
+#main_gnb ul > li > a{
+    /* 테두리 */
+    border: 1px solid black;
+    /* 테두리 높이 너비 */
+    padding: 10px 10px;
+}
+/* 마우스를 올렸을때 글자색은 하얀색 배경색은 검정색 */
+#main_gnb > ul > li > a:hover{
+    color: white;
+    background-color: black;
+}
+/* 맨 왼쪽 버튼 모양을 둥글게 */
+#main_gnb ul > li:first-child > a{
+    border-radius: 10px 0 0 10px;
+}
+/* 맨 오른쪽 버튼 모양을 둥글게 */
+#main_gnb ul > li:last-child > a{
+    border-radius: 0 10px 10px 0;
+}
+
+/* main_lnb */
+#main_header > #main_lnb{
+    position:absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+#main_lnb > ul > li{
+    float: left;
+}
+
+#main_lnb ul > li > a{
+    /* 테두리 */
+    border: 1px solid black;
+    /* 테두리 크기 */
+    padding: 2px 10px;
+}
+/* 마우스를 올렸을때 글자색은 하얀색 배경색은 검정색 */
+#main_lnb > ul > li > a:hover{
+    color: white;
+    background-color: black;
+}
+/* 맨 왼쪽 버튼 모양을 둥글게 */
+#main_lnb ul > li:first-child > a{
+    border-radius: 10px 0 0 10px;
+}
+/* 맨 오른쪽 버튼 모양을 둥글게 */
+#main_lnb ul > li:last-child > a{
+    border-radius: 0 10px 10px 0;
+}
+
+/* content */
+
+#content{
+    /* 가운데 정렬 */
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+/* main_footer */
+
+#main_footer{
+    /* 가운데 정렬 */
+    width: 960px;
+    margin: 0 auto;
+}
